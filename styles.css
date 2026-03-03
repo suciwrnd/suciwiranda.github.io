@@ -235,3 +235,6 @@ footer p:nth-child(3){
         grid-template-columns: 1fr;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
