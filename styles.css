@@ -21,7 +21,7 @@ nav{
 }
 .logo{
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: 1px;
     cursor: pointer;
 }
@@ -171,4 +171,67 @@ footer p:nth-child(3){
     width: 500px;
     text-align: center;
     line-height: 26px;
+}
+
+.favorites {
+    width: 100%;
+    min-height: 100vh; 
+    padding: 120px 0;
+    background-image: url("asset/back.jpeg");
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorites .title h2 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.fav-grid {
+    width: 85%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.fav-card {
+    background-image: url("asset/kotak.jpeg");
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.fav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.fav-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: white
+}
+
+.fav-card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(255, 167, 2);
+}
+
+.fav-card p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .fav-grid {
+        grid-template-columns: 1fr;
+    }
 }
