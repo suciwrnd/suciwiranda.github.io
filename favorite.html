@@ -1,87 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite - Suci Wiranda</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="hero favorite-hero">
-    <nav>
-        <h2 class="logo">P O R T F O L I O</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3" style="background:rgba(0,0,0,.5);backdrop-filter:blur(10px);position:fixed;top:0;width:100%;z-index:1000;">
+    <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">P O R T F O L I O</a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navFav"
+                aria-controls="navFav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navFav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#hobbies">Hobbies</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero favorite-hero">
+    <div style="height:80px;"></div>
+    <div class="container h-100 flex-grow-1 d-flex align-items-center">
+        <div class="row align-items-center w-100 g-5 py-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="hero-content" style="padding:0;">
+                    <h4>Welcome to</h4>
+                    <h1>My<br>Favorites</h1>
+                    <h3>Books, Music &amp; Shows I Love</h3>
+                    <div class="mt-4 d-flex flex-wrap gap-3">
+                        <a href="#favorites-content" class="btn btn-outline-light px-4 py-2 rounded-pill">Explore</a>
+                        <button class="btn px-4 py-2 rounded-pill" style="background:var(--orange);color:white;border:none;"
+                                data-bs-toggle="modal" data-bs-target="#recoModal">
+                            Quick Recommendation
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center" data-aos="fade-left">
+                <img src="asset/suci.jpeg" alt="Suci Wiranda"
+                     class="img-fluid"
+                     style="max-width:380px;width:100%;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);border:3px solid rgba(255,155,4,.3);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Favorites Tabs -->
+<section class="favorites-section" id="favorites-content">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">My Favorites</h2>
+
+        <!-- Bootstrap Nav Tabs -->
+        <ul class="nav nav-tabs justify-content-center" id="favTabs" role="tablist" data-aos="fade-up">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="authors-tab" data-bs-toggle="tab" data-bs-target="#authors" type="button" role="tab">
+                    <i class="fas fa-pen me-2"></i>Authors
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="books-tab" data-bs-toggle="tab" data-bs-target="#books" type="button" role="tab">
+                    <i class="fas fa-book me-2"></i>Books
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="shows-tab" data-bs-toggle="tab" data-bs-target="#shows" type="button" role="tab">
+                    <i class="fas fa-tv me-2"></i>Shows
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button" role="tab">
+                    <i class="fas fa-music me-2"></i>Music
+                </button>
+            </li>
         </ul>
-    </nav>
 
-    <div class="content">
-        <h4>Welcome to</h4>
-        <h1>My<br>Favorites</h1>
-        <h3>Books, Music, and Shows I Love</h3>
+        <!-- Tab content -->
+        <div class="tab-content" id="favTabContent">
+
+            <!-- authors -->
+            <div class="tab-pane fade show active" id="authors" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="fav-card">
+                            <i class="fas fa-pen"></i>
+                            <h3>Favorite Literature Authors</h3>
+                            <ul class="fav-list">
+                                <li>Dee Lestari</li>
+                                <li>Haruki Murakami</li>
+                                <li>Dazai Osamu</li>
+                                <li>Franz Kafka</li>
+                                <li>Fyodor Dostoyevsky</li>
+                                <li>Many else!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- books -->
+            <div class="tab-pane fade" id="books" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="fav-card">
+                            <i class="fas fa-book"></i>
+                            <h3>Favorite Books</h3>
+                            <ul class="fav-list">
+                                <li>Rapijali Series</li>
+                                <li>No Longer Human</li>
+                                <li>If The Cat Disappeared from the World</li>
+                                <li>Hujan</li>
+                                <li>This page is not enough!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- shows -->
+            <div class="tab-pane fade" id="shows" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="fav-card">
+                            <i class="fas fa-tv"></i>
+                            <h3>Favorite Shows</h3>
+                            <ul class="fav-list">
+                                <li>Friends</li>
+                                <li>Young Sheldon</li>
+                                <li>Modern Family</li>
+                                <li>Wednesday</li>
+                                <li>So Many More!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- music-->
+            <div class="tab-pane fade" id="music" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="fav-card">
+                            <i class="fas fa-music"></i>
+                            <h3>Current Favorite Music</h3>
+                            <ul class="fav-list">
+                                <li>Oasis</li>
+                                <li>Dewa 19</li>
+                                <li>Daniel Caesar</li>
+                                <li>Radiohead</li>
+                                <li>Paramore</li>
+                                <li>Yeah, the page is not enough!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer>
+    <div class="container" data-aos="fade-up">
+        <p class="name">Suci Wiranda</p>
+        <p class="nim">2408107010077</p>
+        <div class="social-links mb-4">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="divider"></div>
+        <p class="copy">© 2026 Suci Wiranda.</p>
+    </div>
+</footer>
+
+<div class="modal fade" id="recoModal" tabindex="-1" aria-labelledby="recoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recoModalLabel"><i class="fas fa-star me-2" style="color:var(--orange-bright);"></i>Quick Recommendations</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong style="color:var(--orange-bright);">📚 Start with a book:</strong><br>
+                <em>No Longer Human</em> by Dazai Osamu — short, devastating, unforgettable.</p>
+                <hr style="border-color:#222;">
+                <p><strong style="color:var(--orange-bright);">🎵 Put this on right now:</strong><br>
+                <em>Wonderwall</em> by Oasis. You already know.</p>
+                <hr style="border-color:#222;">
+                <p><strong style="color:var(--orange-bright);">📺 Next binge:</strong><br>
+                <em>Young Sheldon</em> if you like science humor, or <em>Modern Family</em> for pure warmth.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="index.html#hobbies" class="btn" style="background:var(--orange);color:white;">See My Hobbies</a>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="favorites">
-    <div class="title">
-        <h2>My Favorites</h2>
-    </div>
-
-    <div class="fav-grid">
-
-    <div class="fav-card">
-        <h3>Favorite Literature Authors</h3>
-        <i class="fas fa-pen"></i>
-        <p>
-            Dee Lestari<br>
-            Haruki Murakami<br>
-            Dazai Osamu<br>
-            Franz Kafka<br>
-            Fyodor Dostoyevsky<br>
-            Many else!
-        </p>
-    </div>
-
-    <div class="fav-card">
-        <h3>Favorite Books</h3>
-        <i class="fas fa-book"></i>
-        <p>
-            Rapijali Series<br>  
-            No Longer No Human<br>
-            If The Cat Disappeared from The World<br>
-            Hujan<br>
-            This page not enough!
-        </p>
-    </div>
-
-    <div class="fav-card">
-        <h3>Favorite Shows</h3>
-        <i class="fas fa-tv"></i>
-        <p>
-            Friends<br>
-            Young Sheldon<br>
-            Modern Family<br>
-            Wednesday<br>
-            So Manyyy!
-        </p>
-    </div>
-
-    <div class="fav-card">
-        <h3>Current Favorite Music</h3>
-        <i class="fas fa-music"></i>
-        <p>
-            Oasis<br>
-            Dewa 19<br>
-            Daniel Caesar<br>
-            Radiohead<br>
-            Paramore<br>
-            Yeah, the page not enough!
-        </p>
-    </div>
-
-</div>
-</div>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
