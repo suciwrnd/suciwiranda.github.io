@@ -1,85 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio - Suci Wiranda</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous"referrerpolicy="no-referrer" />
-    </head>
-    <body>
-        <div class="hero">
-            <nav>
-                <h2 class="logo">P O R T F O L I O</h2>
-                <ul> 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="favorite.html">Favorite</a></li>
-                    <li><a href="#medsos">Media Social</a></li>
-                </ul>
-            </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Suci Wiranda</title>
 
-            <div class="content">
-                <h4>Hello, my name is</h4>
-                <h1>Suci <br>Wiranda</h1>
-                <h3>Loves comics, books, <br>comedy series</h3>
-            </div>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg fixed-top py-3" id="mainNav"
+     style="background:transparent; transition: background .4s;"
+     data-bs-theme="dark">
+    <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">P O R T F O L I O</a>
+
+        <!-- Bootstrap Toggler Button (Mobile) -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+                <li class="nav-item"><a class="nav-link" href="favorite.html">Favorite</a></li>
+                <li class="nav-item"><a class="nav-link" href="#medsos">Media Social</a></li>
+            </ul>
         </div>
+    </div>
+</nav>
 
-       <section class="about" id="about">
-            <div class="main">
-                <img src="asset/suci.jpeg">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <h5>Science, Tech, and Art</h5>
-                    <p>Science, tech, and art enthusiast. I like physics and earth science to understand how the 
-                        world was formed. I like computer logic and how cool computer science is. But besides that, 
-                        art is also one of the reasons I live with meaningfull.  So basically, I like learning anything 
-                        that I am interested in.</p>
+<!-- hero -->
+<section class="hero d-flex align-items-end" id="home">
+    <div class="hero-content pb-5" data-aos="fade-up">
+        <h4>Hello, my name is</h4>
+        <h1>Suci<br>Wiranda</h1>
+        <h3>Loves comics, books,<br>comedy series</h3>
+        <div class="mt-4 d-flex flex-wrap gap-3">
+            <a href="#about" class="btn btn-outline-light px-4 py-2 rounded-pill">Learn More</a>
+            <a href="favorite.html" class="btn px-4 py-2 rounded-pill"
+               style="background:var(--orange);color:white;border:none;">My Favorites</a>
+        </div>
+    </div>
+</section>
+
+<!-- about -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5 text-center" data-aos="fade-right">
+                <img src="asset/suci.jpeg" alt="Suci Wiranda" class="img-fluid">
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+                <h2>About Me</h2>
+                <h5>Science, Tech &amp; Art</h5>
+                <p>Science, tech, and art enthusiast. I like physics and earth science to understand how the
+                   world was formed. I like computer logic and how cool computer science is. But besides that,
+                   art is also one of the reasons I live with meaning. So basically, I like learning anything
+                   that I am interested in.</p>
+
+                <!-- Bootstrap Badge -->
+                <div class="d-flex flex-wrap gap-2 mt-4 mb-4">
+                    <span class="badge rounded-pill px-3 py-2" style="background:var(--green-dark);font-size:.85rem;">Physics</span>
+                    <span class="badge rounded-pill px-3 py-2" style="background:var(--green-dark);font-size:.85rem;">Computer Science</span>
+                    <span class="badge rounded-pill px-3 py-2" style="background:var(--orange);color:#fff;font-size:.85rem;">Literature</span>
+                    <span class="badge rounded-pill px-3 py-2" style="background:var(--orange);color:#fff;font-size:.85rem;">Art</span>
                 </div>
             </div>
-        </section>
-
-        <div class="Hobbies" id="hobbies">
-        <div class="title">
-            <h2>My Hobbies</h2>
         </div>
-
-        <table class="hobby-table">
-            <tr>
-                <td>
-                    <h3>Reading</h3>
-                    <i class="fas fa-book"></i>
-                    <p>Loves literatures, comics and self improvement books. I recommend Asian Literature.</p>
-                </td>
-
-                <td>
-                    <h3>Music</h3>
-                    <i class="fas fa-music"></i>
-                    <p>Nowadayas my favorite genre is soft rock. Oasis forever.</p>
-                </td>
-
-                <td>
-                    <h3>Show</h3>
-                    <i class="fas fa-tv"></i>
-                    <p>So addicted to comedy series. I recommend Friends, Young Sheldon, Modern Family, many else!</p>
-                </td>
-            </tr>
-    </table>
     </div>
+</section>
 
-    <footer id="medsos">
-        <p>Suci Wiranda</p>
-        <p>2408107010077</p>
-        <p>Glad you saw till the end</p>
-        <div class="medsos">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+<!-- Skills -->
+<section class="skills-section" id="skills">
+    <div class="container" data-aos="fade-up">
+        <h2 class="text-white text-center mb-5" style="font-size:2.5rem;">Skills &amp; Interests</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <p class="skill-label">Reading &amp; Literature</p>
+                <div class="progress mb-4"><div class="progress-bar" style="width:90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div></div>
+
+                <p class="skill-label">Physics &amp; Earth Science</p>
+                <div class="progress mb-4"><div class="progress-bar" style="width:80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div>
+
+                <p class="skill-label">Computer Science</p>
+                <div class="progress"><div class="progress-bar" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+            <div class="col-md-6">
+                <p class="skill-label">Music Appreciation</p>
+                <div class="progress mb-4"><div class="progress-bar" style="width:85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
+
+                <p class="skill-label">Visual Arts</p>
+                <div class="progress mb-4"><div class="progress-bar" style="width:70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div></div>
+
+
+            </div>
         </div>
-    </footer>
-    </body>
+    </div>
+</section>
+
+<!-- hobbies -->
+<section class="hobbies-section" id="hobbies">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">My Hobbies</h2>
+        <!-- Bootstrap Grid (replacing old HTML table) -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="hobby-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Reading</h3>
+                    <p>Loves literature, comics and self-improvement books. I recommend Asian Literature.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="hobby-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Music</h3>
+                    <p>Nowadays my favorite genre is soft rock. Oasis forever.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="hobby-card">
+                    <i class="fas fa-tv"></i>
+                    <h3>Shows</h3>
+                    <p>So addicted to comedy series. I recommend Friends, Young Sheldon, Modern Family, many else!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="medsos">
+    <div class="container" data-aos="fade-up">
+        <p class="name">Suci Wiranda</p>
+        <p class="nim">2408107010077</p>
+        <p class="tagline">Glad you made it to the end</p>
+
+        <div class="social-links mb-4">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="divider"></div>
+        <p class="copy">© 2026 Suci Wiranda.</p>
+    </div>
+</footer>
+
+<!--back to top-->
+<button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<div class="toast-wrapper">
+    <div id="welcomeToast" class="toast align-items-center text-bg-dark border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                👋 Welcome to Suci's Portfolio!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Animation -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+
+    // Navbar background on scroll
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        nav.style.background = window.scrollY > 60 ? 'rgba(0,0,0,.92)' : 'transparent';
+        document.getElementById('back-to-top').classList.toggle('show', window.scrollY > 400);
+    });
+
+    // Welcome toast
+    window.addEventListener('load', () => {
+        const toast = new bootstrap.Toast(document.getElementById('welcomeToast'), { delay: 3000 });
+        toast.show();
+    });
+</script>
+</body>
 </html>
