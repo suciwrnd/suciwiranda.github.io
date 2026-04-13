@@ -34,10 +34,9 @@ html { scroll-behavior: smooth; }
 
 .hero {
     min-height: 100vh;
-    background-image: url("asset/backgg.jpeg");
+    background-image: url("asset/background.jpeg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     position: relative;
 }
 
@@ -45,7 +44,7 @@ html { scroll-behavior: smooth; }
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.35);
+    background: rgba(0,0,0,.25);
     pointer-events: none;
 }
 
@@ -88,10 +87,14 @@ html { scroll-behavior: smooth; }
     text-shadow: 0 2px 12px rgba(255,255,255,.25); 
 }
 
-.hero-content h3 { color: white; font-size: 1.4rem; }
+.hero-content h3 { 
+    color: white; 
+    font-size: 1.4rem; 
+}
 
 
 .favorite-hero .hero-content { padding: 15vh 8% 0; }
+
 .favorite-hero .hero-content h1 { 
     color: var(--orange-bright); 
     font-size: clamp(3rem, 8vw, 5.5rem); 
